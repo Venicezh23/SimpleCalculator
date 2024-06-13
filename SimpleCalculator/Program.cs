@@ -19,8 +19,10 @@ namespace SimpleCalculator
             double num2 = Convert.ToDouble(Console.ReadLine());
 
             double result = num1 + num2;
+            double result2 = num1 - num2;
 
             Console.WriteLine("Sum of num1 and num2: " + result);
+            Console.WriteLine("Subtration of num1 and num2: " + result2);
 
             Console.ReadLine();
         }

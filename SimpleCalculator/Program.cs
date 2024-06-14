@@ -18,13 +18,35 @@ namespace SimpleCalculator
             Console.Write("Enter the second number: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
 
-            double result = num1 + num2;
-            double result2 = num1 - num2;
+            Console.Write("Enter an operator (+ OR - OR * OR /): ");
+            string op = Console.ReadLine();
 
-            Console.WriteLine("Sum of num1 and num2: " + result);
-            Console.WriteLine("Subtration of num1 and num2: " + result2);
+            double result = calculate(num1, num2, op);
+            Console.WriteLine("Result of " + num1 + " " + op + " " + num2 + " = " + result);
 
             Console.ReadLine();
+        }
+
+        static double calculate(double num1, double num2, string op)
+        {
+            if (op == "+")
+            {
+                return num1 + num2;
+            }
+            else if (op == "-")
+            {
+                return num1 - num2;
+            }
+            else if (op == "*")
+            {
+                return num1 * num2;
+            }
+            else if (op == "/")
+            {
+                return num1 / num2;
+            }
+            return 0;
+
         }
     }
 }
